@@ -21,3 +21,12 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+
+.form {
+  width: 350px;
+}
+
+.form__item {
+  display: block;
+  width: 100%;
+}
