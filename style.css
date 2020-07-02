@@ -7,3 +7,17 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+body {
+  background: rgb(9, 7, 163);
+  background: linear-gradient(
+    0deg,
+    rgba(9, 7, 163, 1) 0%,
+    rgba(166, 6, 127, 1) 100%
+  );
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
