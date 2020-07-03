@@ -9,17 +9,18 @@
   </head>
 
   <body id="top">
-    <main>
-      <header>
-        <h1>Formularz kontaktowy</h1>
+    <main class="main">
+      <header class="main__header">
+        <h1 class="main__heading">Formularz kontaktowy</h1>
       </header>
+
       <form class="form" action="https://dev.cotenfrontend.pl" method="POST">
         <p>
-          <label
-            >Imię:
+          <label class="form__label"
+            >* Imię:
             <input
               required
-              class="form__item"
+              class="form__input"
               id="firstName"
               name="firstName"
               placeholder="Wprowadź imię"
@@ -28,11 +29,11 @@
           </label>
         </p>
         <p>
-          <label
-            >Nazwisko:
+          <label class="form__label"
+            >* Nazwisko:
             <input
               required
-              class="form__item"
+              class="form__input"
               id="lastName"
               name="lastName"
               placeholder="Wprowadź nazwisko"
@@ -41,10 +42,10 @@
           </label>
         </p>
         <p>
-          <label
+          <label class="form__label"
             >Numer telefonu:
             <input
-              class="form__item"
+              class="form__input"
               id="phoneNumber"
               name="phoneNumber"
               placeholder="Wprowadź numer telefonu"
@@ -53,25 +54,49 @@
           </label>
         </p>
         <p>
-          <label
-            >E-mail:
+          <label class="form__label"
+            >* Adres e-mail:
             <input
               required
-              class="form__item"
+              class="form__input"
               id="email"
               name="email"
-              placeholder="Wprowadź e-mail"
+              placeholder="Wprowadź adres e-mail"
               type="email"
             />
           </label>
         </p>
         <fieldset>
-          <legend>Adres</legend>
+          <legend class="form__legend">Adres</legend>
           <p>
-            <label
+            <label class="form__label" for="placeResidence"
+              >Miejsce zamieszkania:</label
+            >
+            <select
+              class="form__select"
+              id="placeResidence"
+              name="placeResidence"
+            >
+              <option value="placeResidence-1">Wieś</option>
+              <option value="placeResidence-2"
+                >Miasto poniżej 20 tys. mieszkańców</option
+              >
+              <option value="placeResidence-3"
+                >Miasto 20 tys. - 100 tys. mieszkańców</option
+              >
+              <option value="placeResidence-4"
+                >Miasto 100 tys. - 500 tys. mieszkańców</option
+              >
+              <option value="placeResidence-5"
+                >Miasto powyżej 500 tys. mieszkańców</option
+              >
+            </select>
+          </p>
+          <p>
+            <label class="form__label"
               >Nazwa ulicy:
               <input
-                class="form__item"
+                class="form__input"
                 id="streetName"
                 name="streetName"
                 placeholder="Wprowadź nazwę ulicy"
@@ -80,34 +105,34 @@
             </label>
           </p>
           <p>
-            <label
+            <label class="form__label"
+              >Numer budynku:
+              <input
+                class="form__input"
+                id="buildingNumber"
+                name="buildingNumber"
+                placeholder="Wprowadź numer budynku"
+                type="text"
+              />
+            </label>
+          </p>
+          <p>
+            <label class="form__label"
               >Numer lokalu:
               <input
-                class="form__item"
+                class="form__input"
                 id="apartmentNumber"
                 name="apartmentNumber"
                 placeholder="Wprowadź numer lokalu"
-                type="text"
+                type="number"
               />
             </label>
           </p>
           <p>
-            <label
-              >Miasto:
-              <input
-                class="form__item"
-                id="city"
-                name="city"
-                placeholder="Wprowadź miasto"
-                type="text"
-              />
-            </label>
-          </p>
-          <p>
-            <label
+            <label class="form__label"
               >Kod pocztowy:
               <input
-                class="form__item"
+                class="form__input"
                 id="postalCode"
                 name="postalCode"
                 pattern="[0-9]{2}-[0-9]{3}"
@@ -116,31 +141,55 @@
               />
             </label>
           </p>
+          <p>
+            <label class="form__label"
+              >Miejscowość:
+              <input
+                class="form__input"
+                id="city"
+                name="city"
+                placeholder="Wprowadź miejscowość"
+                type="text"
+              />
+            </label>
+          </p>
         </fieldset>
         <p>
-          <label
+          <label class="form__label"
             >Fotografia:
-            <input class="form__item" id="photo" name="photo" type="file" />
+            <input class="form__input" id="photo" name="photo" type="file" />
           </label>
         </p>
         <p>
-          <label
+          <label class="form__label"
+            >Uwagi / pytania:
+            <textarea
+              class="form__textarea"
+              id="attention"
+              name="attention"
+            ></textarea>
+          </label>
+        </p>
+        <p>
+          <label class="form__label"
             ><input required name="agreement" type="checkbox" value="agree" />
-            Wyrażam zgodę na przetwarzanie moich danych osobowych.</label
+            Wyrażam zgodę na przetwarzanie moich danych osobowych w celach
+            marketingowych, poprzez przesyłanie informacji handlowych za pomocą
+            poczty elektronicznej, na podany adres e-mail.</label
           >
         </p>
         <p>
-          <input type="submit" value="Wyślij" />
+          <input
+            class="form__input form__input--submit"
+            type="submit"
+            value="Wyślij"
+          />
         </p>
       </form>
-      <footer>
+
+      <footer class="footer">
         <p>
-          Formularz powstał na potrzeby szkolenia
-          <a href="https://cotenfrontend.pl/" target="blank"
-            >WTF: Co ten frontend</a
-          >
-          🚀.<br />
-          <a href="#top">Wróć na górę strony</a>
+          <a class="footer__link" href="#top">Wróć na górę strony</a>
         </p>
       </footer>
     </main>
